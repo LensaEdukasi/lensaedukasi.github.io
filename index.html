@@ -151,21 +151,142 @@ footer{
     font-size: 30px;
   }
 }
+  .hero {
+  position: relative;
+  min-height: 90vh;
+  background: linear-gradient(135deg, #0a1f44, #102a72);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at top right, rgba(255,255,255,0.15), transparent 40%),
+    radial-gradient(circle at bottom left, rgba(255,122,0,0.25), transparent 45%);
+}
+
+.hero-content {
+  position: relative;
+  text-align: center;
+  color: white;
+  max-width: 700px;
+  padding: 20px;
+  animation: fadeUp 1.2s ease;
+}
+
+.hero-badge {
+  display: inline-block;
+  background: rgba(255,255,255,0.15);
+  padding: 6px 18px;
+  border-radius: 30px;
+  font-size: 13px;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.hero-title {
+  font-size: 48px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.hero-title span {
+  color: #ff7a00;
+}
+
+.hero-desc {
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 40px;
+  opacity: 0.95;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  background: #ff7a00;
+  color: white;
+  padding: 14px 34px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.btn-primary:hover {
+  background: #e66d00;
+}
+
+.btn-outline {
+  border: 2px solid white;
+  color: white;
+  padding: 12px 30px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.btn-outline:hover {
+  background: white;
+  color: #102a72;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 32px;
+  }
+  .hero-desc {
+    font-size: 16px;
+  }
+}
 </style>
 </head>
 
 <body>
 
 <header class="hero">
+  <div class="hero-overlay"></div>
+
   <div class="hero-content">
-    <p class="hero-subtitle">Home Tutoring</p>
-    <h1 class="hero-title">LENSA EDUKASI</h1>
+    <span class="hero-badge">Home Tutoring</span>
+
+    <h1 class="hero-title">
+      LENSA <span>EDUKASI</span>
+    </h1>
+
     <p class="hero-desc">
-      Bimbingan Privat dan Kelompok di Kota Pekalongan
+      Bimbingan Privat dan Kelompok<br>
+      di Kota Pekalongan
     </p>
 
-    <div class="hero-button">
-      <a href="https://wa.me/6289520306474" class="btn-primary">Daftar Sekarang</a>
+    <div class="hero-buttons">
+      <a href="https://wa.me/6289520306474" class="btn-primary">
+        Daftar Sekarang
+      </a>
+      <a href="#program" class="btn-outline">
+        Lihat Program
+      </a>
     </div>
   </div>
 </header>
@@ -217,5 +338,6 @@ Lensa Edukasi adalah bimbingan belajar privat di Pekalongan yang membantu siswa 
 
 </body>
 </html>
+
 
 
