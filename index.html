@@ -102,18 +102,72 @@ footer{
   text-decoration:none;
   box-shadow:0 8px 20px rgba(0,0,0,.25);
 }
+  .hero {
+  background: linear-gradient(135deg, #0a1f44, #102a72);
+  color: white;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.hero-subtitle {
+  font-size: 14px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  opacity: 0.9;
+}
+
+.hero-title {
+  font-size: 42px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.hero-desc {
+  font-size: 16px;
+  max-width: 600px;
+  margin: 0 auto 35px;
+  opacity: 0.9;
+}
+
+.hero-button .btn-primary {
+  background: #ff7a00;
+  color: white;
+  padding: 15px 35px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  display: inline-block;
+}
+
+.hero-button .btn-primary:hover {
+  background: #e66d00;
+}
+
+/* Responsive HP */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 30px;
+  }
+}
 </style>
 </head>
 
 <body>
 
-<header>
-<h1>Lensa Edukasi</h1>
-<p>
-Bimbel Privat Pekalongan • SD – SMP – SMA <br>
-Guru datang ke rumah • Fokus paham konsep, bukan hafalan
-</p>
-<a class="cta" href="https://wa.me/6289520306474">Daftar via WhatsApp</a>
+<header class="hero">
+  <div class="hero-content">
+    <p class="hero-subtitle">Home Tutoring</p>
+    <h1 class="hero-title">LENSA EDUKASI</h1>
+    <p class="hero-desc">
+      Bimbingan Privat dan Kelompok di Kota Pekalongan
+    </p>
+
+    <div class="hero-button">
+      <a href="https://wa.me/6289520306474" class="btn-primary">Daftar Sekarang</a>
+    </div>
+  </div>
 </header>
 
 <section>
@@ -172,3 +226,4 @@ Lensa Edukasi adalah bimbingan belajar privat di Pekalongan yang membantu siswa 
 
 </body>
 </html>
+
