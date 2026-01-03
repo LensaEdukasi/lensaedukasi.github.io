@@ -1,176 +1,174 @@
-```html
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lensa Edukasi – Home Tutoring</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-            color: #333;
-            line-height: 1.6;
-        }
-        header {
-            background: linear-gradient(135deg, #4CAF50, #2196F3);
-            color: white;
-            text-align: center;
-            padding: 50px 20px;
-        }
-        header h1 {
-            font-size: 2.5em;
-            margin: 0;
-        }
-        header p {
-            font-size: 1.2em;
-            margin: 10px 0 20px;
-        }
-        .cta-button {
-            background-color: #FF9800;
-            color: white;
-            padding: 15px 30px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 1.1em;
-            display: inline-block;
-        }
-        .cta-button:hover {
-            background-color: #E68900;
-        }
-        section {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-        section h2 {
-            color: #2196F3;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .program, .keunggulan, .jenjang {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-        }
-        .program-item, .keunggulan-item, .jenjang-item {
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            padding: 20px;
-            margin: 10px;
-            flex: 1 1 300px;
-            max-width: 400px;
-        }
-        .program-item h3, .keunggulan-item h3, .jenjang-item h3 {
-            color: #4CAF50;
-        }
-        .kontak {
-            text-align: center;
-            background: #E3F2FD;
-            padding: 20px;
-        }
-        .kontak p {
-            margin: 10px 0;
-        }
-        footer {
-            background: #333;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2em;
-            }
-            header p {
-                font-size: 1em;
-            }
-            .program-item, .keunggulan-item, .jenjang-item {
-                flex: 1 1 100%;
-            }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lensa Edukasi | Bimbel Privat Pekalongan</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --primary:#1e40af;
+  --accent:#f97316;
+  --bg:#f8fafc;
+  --dark:#0f172a;
+  --gray:#64748b;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{background:var(--bg);color:var(--dark);line-height:1.7;}
+
+header{
+  background:linear-gradient(135deg,var(--primary),#1e3a8a);
+  color:#fff;
+  text-align:center;
+  padding:90px 20px;
+}
+
+header h1{font-size:2.8rem;margin-bottom:10px;}
+header p{max-width:720px;margin:0 auto 30px;font-size:1.1rem;opacity:.95;}
+
+.cta{
+  background:var(--accent);
+  color:#fff;
+  padding:16px 34px;
+  border-radius:50px;
+  font-weight:600;
+  text-decoration:none;
+  display:inline-block;
+  transition:.3s;
+}
+.cta:hover{background:#ea580c;transform:translateY(-2px);}
+
+section{max-width:1100px;margin:auto;padding:80px 20px;}
+h2{text-align:center;font-size:2rem;margin-bottom:40px;}
+
+.about{text-align:center;max-width:800px;margin:auto;color:var(--gray);}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:28px;
+}
+
+.card{
+  background:#fff;
+  padding:32px;
+  border-radius:18px;
+  box-shadow:0 12px 30px rgba(0,0,0,.08);
+  transition:.3s;
+}
+.card:hover{transform:translateY(-6px);}
+.card h3{margin-bottom:10px;color:var(--primary);}
+.card p{color:var(--gray);font-size:.95rem;}
+
+.highlight{
+  background:#e0f2fe;
+  border-radius:22px;
+  padding:60px 25px;
+}
+
+.testi{
+  font-style:italic;
+  color:#334155;
+}
+
+.contact{
+  text-align:center;
+  background:#f1f5f9;
+  border-radius:22px;
+  padding:60px 20px;
+}
+
+footer{
+  background:var(--dark);
+  color:#cbd5f5;
+  text-align:center;
+  padding:35px 15px;
+  font-size:.9rem;
+}
+
+/* Floating WA */
+.wa-float{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  color:white;
+  padding:14px 18px;
+  border-radius:50px;
+  font-weight:600;
+  text-decoration:none;
+  box-shadow:0 8px 20px rgba(0,0,0,.25);
+}
+</style>
 </head>
+
 <body>
-    <header>
-        <h1>Lensa Edukasi – Home Tutoring</h1>
-        <p>Belajar Nyaman di Rumah dengan Metode Personal dan Terarah</p>
-        <a href="https://wa.me/6289520306474" class="cta-button">Daftar Sekarang</a>
-    </header>
 
-    <section id="tentang">
-        <h2>Tentang Lensa Edukasi</h2>
-        <p>Kami menyediakan bimbel privat & pendampingan belajar yang fokus pada kebutuhan siswa. Belajar bisa dilakukan di rumah siswa atau di rumah belajar kami. Lokasi: Pekalongan Barat.</p>
-    </section>
+<header>
+<h1>Lensa Edukasi</h1>
+<p>
+Bimbel Privat Pekalongan • SD – SMP – SMA <br>
+Guru datang ke rumah • Fokus paham konsep, bukan hafalan
+</p>
+<a class="cta" href="https://wa.me/6289520306474">Daftar via WhatsApp</a>
+</header>
 
-    <section id="program">
-        <h2>Program Unggulan</h2>
-        <div class="program">
-            <div class="program-item">
-                <h3>🔹 Privat Singkat (Bayar per pertemuan)</h3>
-                <p>Bebas menentukan jumlah pertemuan. Materi sesuai kebutuhan siswa (PR, ulangan, ujian).</p>
-            </div>
-            <div class="program-item">
-                <h3>🔹 Privat Intensif (Bayar per bulan)</h3>
-                <p>Berlaku 1 bulan sesuai paket. Materi bertahap & terstruktur. Lebih hemat + bonus latihan soal / konsultasi.</p>
-            </div>
-        </div>
-    </section>
+<section>
+<h2>Tentang Kami</h2>
+<p class="about">
+Lensa Edukasi adalah bimbingan belajar privat di Pekalongan yang membantu siswa belajar lebih tenang, terarah, dan sesuai kebutuhan. Kami fokus pada penguatan konsep dasar agar siswa tidak hanya bisa mengerjakan soal, tetapi benar-benar memahami pelajaran.
+</p>
+</section>
 
-    <section id="keunggulan">
-        <h2>Keunggulan Lensa Edukasi</h2>
-        <div class="keunggulan">
-            <div class="keunggulan-item">
-                <h3>Jadwal Fleksibel</h3>
-                <p>Sesuai kesepakatan dengan siswa.</p>
-            </div>
-            <div class="keunggulan-item">
-                <h3>Materi Sesuai Kebutuhan</h3>
-                <p>Disesuaikan dengan kebutuhan siswa.</p>
-            </div>
-            <div class="keunggulan-item">
-                <h3>Penguatan Konsep Dasar</h3>
-                <p>Fokus pada pemahaman dasar.</p>
-            </div>
-            <div class="keunggulan-item">
-                <h3>1 Murid 1 Guru</h3>
-                <p>Atau kelompok kecil untuk efisiensi.</p>
-            </div>
-            <div class="keunggulan-item">
-                <h3>Kurikulum Menyesuaikan Sekolah</h3>
-                <p>Sesuai dengan kurikulum sekolah siswa.</p>
-            </div>
-        </div>
-    </section>
+<section class="highlight">
+<h2>Kenapa Orang Tua Memilih Lensa Edukasi?</h2>
+<div class="grid">
+<div class="card"><h3>1 Murid 1 Guru</h3><p>Pendampingan maksimal dan fokus penuh.</p></div>
+<div class="card"><h3>Jadwal Fleksibel</h3><p>Bisa disesuaikan dengan waktu keluarga.</p></div>
+<div class="card"><h3>Materi Sesuai Sekolah</h3><p>Menyesuaikan kurikulum & target siswa.</p></div>
+<div class="card"><h3>Belajar Lebih Nyaman</h3><p>Siswa belajar di rumah tanpa tekanan.</p></div>
+</div>
+</section>
 
-    <section id="jenjang">
-        <h2>Jenjang & Mata Pelajaran</h2>
-        <div class="jenjang">
-            <div class="jenjang-item">
-                <h3>SD – SMP</h3>
-                <p>Semua Mata Pelajaran</p>
-            </div>
-            <div class="jenjang-item">
-                <h3>SMA</h3>
-                <p>Matematika, Fisika, Kimia, Bahasa Inggris</p>
-            </div>
-        </div>
-    </section>
+<section>
+<h2>Program Bimbingan</h2>
+<div class="grid">
+<div class="card">
+<h3>Privat Singkat</h3>
+<p>Bayar per pertemuan. Cocok untuk PR, ulangan, atau materi yang belum dipahami.</p>
+</div>
+<div class="card">
+<h3>Privat Intensif</h3>
+<p>Paket bulanan, materi bertahap, lebih hemat dan terstruktur.</p>
+</div>
+</div>
+</section>
 
-    <section id="kontak" class="kontak">
-        <h2>Lokasi & Kontak</h2>
-        <p>Alamat: Pringlangu Gg. 6B, Pekalongan Barat</p>
-        <p>WhatsApp: 0895-2030-6474</p>
-        <a href="https://wa.me/6289520306474" class="cta-button">Hubungi via WhatsApp</a>
-    </section>
+<section>
+<h2>Testimoni Orang Tua</h2>
+<div class="grid">
+<div class="card testi">“Anak saya jadi lebih paham dan tidak takut matematika lagi.”</div>
+<div class="card testi">“Guru sabar dan penjelasannya mudah dimengerti.”</div>
+<div class="card testi">“Belajar di rumah jadi lebih efektif.”</div>
+</div>
+</section>
 
-    <footer>
-        <p>&copy; Lensa Edukasi – Home Tutoring</p>
-        <p>Gratis Pendaftaran</p>
-    </footer>
+<section class="contact">
+<h2>Lokasi & Kontak</h2>
+<p>📍 Pringlangu Gg. 6B, Pekalongan Barat</p>
+<p>📱 WhatsApp: 0895-2030-6474</p><br>
+<a class="cta" href="https://wa.me/6289520306474">Hubungi Sekarang</a>
+</section>
+
+<footer>
+<p>© Lensa Edukasi – Bimbel Privat Pekalongan</p>
+<p>Pendaftaran Gratis • Guru Berpengalaman</p>
+</footer>
+
+<a class="wa-float" href="https://wa.me/6289520306474">💬 WhatsApp</a>
+
 </body>
 </html>
-```
