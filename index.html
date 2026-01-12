@@ -1,349 +1,321 @@
+<think>
+Pertama, instruksi adalah membuat satu file `index.html` saja, yang mencakup HTML, CSS di dalam `<style>`, dan JS di dalam `<script>` jika diperlukan. Tidak boleh ada file tambahan.
+
+
+## Reviewing task instructions  
+- The task requires creating a single `index.html` file that includes HTML, CSS within a `<style>` tag, and JavaScript within a `<script>` tag if needed.  
+- No additional files are allowed, keeping everything contained in one file.  
+- The focus is on combining all necessary code elements into a cohesive HTML structure.
+
+## Reviewing design specifications  
+- The task involves creating a website identical to the Lensa Edukasi design, prioritizing visual accuracy over creativity.  
+- The structure includes a header with a logo on the left and menu on the right, followed by sections like Hero, About Us, and Features.
+</think>```html
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lensa Edukasi | Bimbel Privat Pekalongan</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-<style>
-:root{
-  --primary:#1e40af;
-  --accent:#f97316;
-  --bg:#f8fafc;
-  --dark:#0f172a;
-  --gray:#64748b;
-}
-
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
-body{background:var(--bg);color:var(--dark);line-height:1.7;}
-
-header{
-  background:linear-gradient(135deg,var(--primary),#1e3a8a);
-  color:#fff;
-  text-align:center;
-  padding:90px 20px;
-}
-
-header h1{font-size:2.8rem;margin-bottom:10px;}
-header p{max-width:720px;margin:0 auto 30px;font-size:1.1rem;opacity:.95;}
-
-.cta{
-  background:var(--accent);
-  color:#fff;
-  padding:16px 34px;
-  border-radius:50px;
-  font-weight:600;
-  text-decoration:none;
-  display:inline-block;
-  transition:.3s;
-}
-.cta:hover{background:#ea580c;transform:translateY(-2px);}
-
-section{max-width:1100px;margin:auto;padding:80px 20px;}
-h2{text-align:center;font-size:2rem;margin-bottom:40px;}
-
-.about{text-align:center;max-width:800px;margin:auto;color:var(--gray);}
-
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:28px;
-}
-
-.card{
-  background:#fff;
-  padding:32px;
-  border-radius:18px;
-  box-shadow:0 12px 30px rgba(0,0,0,.08);
-  transition:.3s;
-}
-.card:hover{transform:translateY(-6px);}
-.card h3{margin-bottom:10px;color:var(--primary);}
-.card p{color:var(--gray);font-size:.95rem;}
-
-.highlight{
-  background:#e0f2fe;
-  border-radius:22px;
-  padding:60px 25px;
-}
-
-.testi{
-  font-style:italic;
-  color:#334155;
-}
-
-.contact{
-  text-align:center;
-  background:#f1f5f9;
-  border-radius:22px;
-  padding:60px 20px;
-}
-
-footer{
-  background:var(--dark);
-  color:#cbd5f5;
-  text-align:center;
-  padding:35px 15px;
-  font-size:.9rem;
-}
-
-/* Floating WA */
-.wa-float{
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  background:#25D366;
-  color:white;
-  padding:14px 18px;
-  border-radius:50px;
-  font-weight:600;
-  text-decoration:none;
-  box-shadow:0 8px 20px rgba(0,0,0,.25);
-}
-  .hero {
-  background: linear-gradient(135deg, #0a1f44, #102a72);
-  color: white;
-  padding: 100px 20px;
-  text-align: center;
-}
-
-.hero-subtitle {
-  font-size: 14px;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  margin-bottom: 15px;
-  opacity: 0.9;
-}
-
-.hero-title {
-  font-size: 42px;
-  font-weight: 800;
-  margin-bottom: 20px;
-}
-
-.hero-desc {
-  font-size: 16px;
-  max-width: 600px;
-  margin: 0 auto 35px;
-  opacity: 0.9;
-}
-
-.hero-button .btn-primary {
-  background: #ff7a00;
-  color: white;
-  padding: 15px 35px;
-  border-radius: 50px;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 16px;
-  display: inline-block;
-}
-
-.hero-button .btn-primary:hover {
-  background: #e66d00;
-}
-
-/* Responsive HP */
-@media (max-width: 768px) {
-  .hero-title {
-    font-size: 30px;
-  }
-}
-  .hero {
-  position: relative;
-  min-height: 90vh;
-  background: linear-gradient(135deg, #0a1f44, #102a72);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
-
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(circle at top right, rgba(255,255,255,0.15), transparent 40%),
-    radial-gradient(circle at bottom left, rgba(255,122,0,0.25), transparent 45%);
-}
-
-.hero-content {
-  position: relative;
-  text-align: center;
-  color: white;
-  max-width: 700px;
-  padding: 20px;
-  animation: fadeUp 1.2s ease;
-}
-
-.hero-badge {
-  display: inline-block;
-  background: rgba(255,255,255,0.15);
-  padding: 6px 18px;
-  border-radius: 30px;
-  font-size: 13px;
-  letter-spacing: 2px;
-  margin-bottom: 20px;
-  text-transform: uppercase;
-}
-
-.hero-title {
-  font-size: 48px;
-  font-weight: 800;
-  margin-bottom: 20px;
-}
-
-.hero-title span {
-  color: #ff7a00;
-}
-
-.hero-desc {
-  font-size: 18px;
-  line-height: 1.7;
-  margin-bottom: 40px;
-  opacity: 0.95;
-}
-
-.hero-buttons {
-  display: flex;
-  gap: 15px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.btn-primary {
-  background: #ff7a00;
-  color: white;
-  padding: 14px 34px;
-  border-radius: 50px;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.btn-primary:hover {
-  background: #e66d00;
-}
-
-.btn-outline {
-  border: 2px solid white;
-  color: white;
-  padding: 12px 30px;
-  border-radius: 50px;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.btn-outline:hover {
-  background: white;
-  color: #102a72;
-}
-
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .hero-title {
-    font-size: 32px;
-  }
-  .hero-desc {
-    font-size: 16px;
-  }
-}
-  .hero-logo {
-    max-width : 150px;
-    display : block;
-    margin : 0 auto 20px;
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lensa Edukasi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: #fff;
+            border-bottom: 1px solid #eee;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: #333;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        nav ul li {
+            margin-left: 30px;
+            font-weight: 600;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+        }
+        .hero {
+            background: linear-gradient(to right, #4facfe, #9c27b0);
+            padding: 50px;
+            display: flex;
+            align-items: center;
+            min-height: 400px;
+        }
+        .hero .left {
+            flex: 1;
+            text-align: center;
+        }
+        .hero .left img {
+            width: 300px;
+            height: auto;
+            border: 2px solid #fff;
+            border-radius: 10px;
+        }
+        .hero .right {
+            flex: 1;
+            color: #fff;
+            padding-left: 50px;
+        }
+        .hero h1 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .hero button {
+            background-color: #ff0000;
+            color: #fff;
+            border: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: 600;
+            border-radius: 25px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .tentang {
+            padding: 50px;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .tentang h2 {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 30px;
+        }
+        .tentang p {
+            font-size: 16px;
+            line-height: 1.8;
+        }
+        .kenapa {
+            background-color: #f5f5f5;
+            padding: 50px;
+            text-align: center;
+        }
+        .kenapa h2 {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 40px;
+        }
+        .kenapa .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .card {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .card h3 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        .program {
+            padding: 50px;
+            text-align: center;
+        }
+        .program h2 {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 40px;
+        }
+        .program .main-cards {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        .program .main-card {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            width: 200px;
+        }
+        .program .main-card h3 {
+            font-size: 20px;
+            font-weight: 600;
+        }
+        .program .categories {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .category {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .category h3 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        .lokasi {
+            background-color: #2e7d32;
+            color: #fff;
+            padding: 50px;
+            display: flex;
+            align-items: center;
+        }
+        .lokasi .left {
+            flex: 1;
+            text-align: center;
+        }
+        .lokasi .left img {
+            width: 100px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        .lokasi .right {
+            flex: 1;
+            padding-left: 50px;
+        }
+        .lokasi h2 {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        .lokasi p {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
 </head>
-
 <body>
+    <nav>
+        <div class="logo">LENSA EDUKASI</div>
+        <ul>
+            <li><a href="#">BERANDA</a></li>
+            <li><a href="#">TENTANG KAMI</a></li>
+            <li><a href="#">PROGRAM</a></li>
+            <li><a href="#">KONTAK</a></li>
+        </ul>
+    </nav>
 
-<header class="hero">
-  <div class="hero-overlay"></div>
-<img src="Logolensa.png" alt="Logo Lensa Edukasi" class="hero=logo">
-  <div class="hero-content">
-    <span class="hero-badge">Home Tutoring</span>
+    <section class="hero">
+        <div class="left">
+            <img src="assets/img/siswa.jpg" alt="Siswa belajar">
+        </div>
+        <div class="right">
+            <h1>LENSA EDUKASI<br>HOME TUTORING</h1>
+            <p>Bimbingan Les Privat dan Kelompok<br>di Kota Pekalongan</p>
+            <p>SD | SMP | SMA</p>
+            <button>DAFTAR</button>
+        </div>
+    </section>
 
-    <h1 class="hero-title">
-      LENSA <span>EDUKASI</span>
-    </h1>
+    <section class="tentang">
+        <h2>Tentang Kami</h2>
+        <p>Lensa Edukasi adalah platform pembelajaran yang menyediakan layanan les privat untuk siswa SD, SMP, dan SMA. Kami hadir untuk membantu siswa memahami materi pelajaran dengan cara yang lebih sederhana, terstruktur, dan mudah dipahami.</p>
+        <p>Dengan pendekatan pembelajaran yang fleksibel dan berfokus pada pemahaman konsep, Lensa Edukasi menjadi solusi belajar yang efektif bagi siswa dan orang tua.</p>
+    </section>
 
-    <p class="hero-desc">
-      Bimbingan Privat dan Kelompok<br>
-      di Kota Pekalongan
-    </p>
+    <section class="kenapa">
+        <h2>KENAPA MEMILIH LENSA EDUKASI?</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>1 Murid 1 Guru / belajar dengan teman</h3>
+            </div>
+            <div class="card">
+                <h3>Jadwal Fleksibel</h3>
+            </div>
+            <div class="card">
+                <h3>Materi Sesuai Sekolah</h3>
+            </div>
+            <div class="card">
+                <h3>Latihan Soal</h3>
+            </div>
+            <div class="card">
+                <h3>Belajar Lebih Nyaman</h3>
+            </div>
+            <div class="card">
+                <h3>Menyesuaikan Tempat</h3>
+            </div>
+        </div>
+    </section>
 
-    <div class="hero-buttons">
-      <a href="https://wa.me/6289520306474" class="btn-primary">
-        Daftar Sekarang
-      </a>
-      <a href="#program" class="btn-outline">
-        Lihat Program
-      </a>
-    </div>
-  </div>
-</header>
+    <section class="program">
+        <h2>PROGRAM BIMBINGAN</h2>
+        <div class="main-cards">
+            <div class="main-card">
+                <h3>PRIVAT SINGKAT</h3>
+            </div>
+            <div class="main-card">
+                <h3>PRIVAT INTENSIF</h3>
+            </div>
+        </div>
+        <div class="categories">
+            <div class="category">
+                <h3>SD / MI — Semua Mapel</h3>
+            </div>
+            <div class="category">
+                <h3>SMP / MTs — Semua Mapel</h3>
+            </div>
+            <div class="category">
+                <h3>SMA / MA — MTK, FISIKA, KIMIA, BHS.INGGRIS</h3>
+            </div>
+        </div>
+    </section>
 
-<section>
-<h2>Tentang Kami</h2>
-<p class="about">
-Lensa Edukasi adalah bimbingan belajar privat di Pekalongan yang membantu siswa belajar lebih tenang, terarah, dan sesuai kebutuhan. Kami fokus pada penguatan konsep dasar agar siswa tidak hanya bisa mengerjakan soal, tetapi benar-benar memahami pelajaran.
-</p>
-</section>
+    <section class="lokasi">
+        <div class="left">
+            <img src="assets/img/logo.png" alt="Logo">
+            <p>Lensa Tajam,<br>Ilmu Dalam Genggaman</p>
+        </div>
+        <div class="right">
+            <h2>LOKASI & KONTAK</h2>
+            <p>Pringlangu Gg. 6B<br>Pekalongan Barat</p>
+            <p>WhatsApp: 0895-2030-6474</p>
+        </div>
+    </section>
 
-<section class="highlight">
-<h2>Kenapa Orang Tua Memilih Lensa Edukasi?</h2>
-<div class="grid">
-<div class="card"><h3>1 Murid 1 Guru</h3><p>Pendampingan maksimal dan fokus penuh.</p></div>
-<div class="card"><h3>Jadwal Fleksibel</h3><p>Bisa disesuaikan dengan waktu keluarga.</p></div>
-<div class="card"><h3>Materi Sesuai Sekolah</h3><p>Menyesuaikan kurikulum & target siswa.</p></div>
-<div class="card"><h3>Belajar Lebih Nyaman</h3><p>Siswa belajar di rumah tanpa tekanan.</p></div>
-</div>
-</section>
+    <footer>
+        <p>@LensaEdukasi By Lensa Akademia</p>
+    </footer>
 
-<section>
-<h2>Program Bimbingan</h2>
-<div class="grid">
-<div class="card">
-<h3>Privat Singkat</h3>
-<p>Bayar per pertemuan. Cocok untuk PR, ulangan, atau materi yang belum dipahami.</p>
-</div>
-<div class="card">
-<h3>Privat Intensif</h3>
-<p>Paket bulanan, materi bertahap, lebih hemat dan terstruktur.</p>
-</div>
-</div>
-</section>
-
-
-<section class="contact">
-<h2>Lokasi & Kontak</h2>
-<p>📍 Pringlangu Gg. 6B, Pekalongan Barat</p>
-<p>📱 WhatsApp: 0895-2030-6474</p><br>
-<a class="cta" href="https://wa.me/6289520306474">Hubungi Sekarang</a>
-</section>
-
-<footer>
-<p>© Lensa Edukasi – Bimbel Privat Pekalongan</p>
-</footer>
-
-<a class="wa-float" href="https://wa.me/6289520306474">💬 WhatsApp</a>
-
+    <script>
+        // No JavaScript required
+    </script>
 </body>
 </html>
-
-
-
-
